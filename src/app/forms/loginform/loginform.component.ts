@@ -14,8 +14,8 @@ export class LoginformComponent implements OnInit {
   ngOnInit(): void {
     // Initialize the 'loginform' FormGroup and define the form controls
     this.loginform = this.fb.group({
-      username: ['', Validators.required], // Add Validators if needed (e.g., required)
-      password: ['', Validators.required], // Add Validators if needed (e.g., required)
+      username: ['', Validators.required, Validators.email], // Add Validators if needed (e.g., required)
+      password: ['', [Validators.required, Validators.minLength(8), Validators.pattern(/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[!@#$%^&*()_+~`-]).{8,}$/)]], // Add Validators if needed (e.g., required)
     });
   }
 

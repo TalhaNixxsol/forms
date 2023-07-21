@@ -1,0 +1,102 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container{
+  background-color: silver;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+.card{
+  width: 400px;
+  background: linear-gradient(to right,
+   rgb(221, 24, 57) ,
+    rgb(161, 6, 141));
+  border-radius: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0px 0px 25px 0px;
+}
+.adjuster{
+  width: 80%;
+}
+input{
+  background-color: silver;
+  padding: 10px;
+  border-radius: 20px;
+  border-style: none;
+  width: 100%;
+  margin-top: 20px;
+}
+/* Update the styles for the label and checkbox */
+label {
+
+  color: silver;
+}
+
+/* Remove padding and margin from the checkbox input */
+#acceptCheckbox input {
+  margin: 0; /* Remove any margin */
+  padding: 0; /* Remove any padding */
+}
+
+/* Add some spacing between the checkbox and label text */
+#acceptCheckbox {
+  margin-left: 0;
+  width: 20px;
+}
+
+
+h2{
+  padding: 20px;
+  color: silver;
+  font-size: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+button{
+  padding: 10px;
+  width: 100%;
+  color: silver;
+  font-weight: bolder;
+  font-size: 20px;
+  border-style: none;
+  border-radius: 20px;
+  background-color: rgb(134, 4, 80);
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+button:hover{
+  cursor: pointer;
+}
+
+
+
+@media screen and (max-width: 393px) {
+  .card {
+    width: 300px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .card {
+    width: 350px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .card {
+    width: 300px;
+  }
+}
+@media screen and (max-width: 280px) {
+  .card {
+    width: 250px;
+  }
+}

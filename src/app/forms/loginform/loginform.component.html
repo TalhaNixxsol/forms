@@ -7,10 +7,20 @@
         <label for="username">Username</label>
         <!-- Add 'formControlName' for the username input -->
         <input type="text" formControlName="username" />
+        <div *ngIf="loginform.controls['username'].touched && loginform.controls['username'].errors?.['required']">
+          Username / Email is required
+        </div>
         <label for="password">Password</label>
         <!-- Add 'formControlName' for the password input -->
         <input type="password" formControlName="password" />
-        <button type="submit">LOGIN</button>
+        <div *ngIf="loginform.controls['password']?.touched && loginform.controls['password'].invalid">
+          Minimum length is 8 <br>
+          Contains atleast 1 Special Character <br>
+          Contains atleast 1 uppercase and 1 lowercase <br>
+        </div>
+        <button type="submit" [disabled]="loginform.invalid" >
+          Login
+        </button>
       </form>
     </div>
   </div>
