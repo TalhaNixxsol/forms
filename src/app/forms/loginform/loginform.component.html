@@ -1,1 +1,17 @@
-<p>loginform works!</p>
+<div class="container">
+  <div class="card">
+    <div class="adjuster">
+      <!-- Add the 'ngNoForm' directive to prevent Angular from creating a <form> element -->
+      <form [formGroup]="loginform" (ngSubmit)="onSubmit(loginform.value)" ngNoForm>
+        <h2>sign in</h2>
+        <label for="username">Username</label>
+        <!-- Add 'formControlName' for the username input -->
+        <input type="text" formControlName="username" />
+        <label for="password">Password</label>
+        <!-- Add 'formControlName' for the password input -->
+        <input type="password" formControlName="password" />
+        <button type="submit">LOGIN</button>
+      </form>
+    </div>
+  </div>
+</div>
